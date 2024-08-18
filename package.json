@@ -3,15 +3,13 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "bin": {
-    "payment": "bin/payment.ts"
+    "payment-templates": "bin/payment.ts"
   },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "echo 'Payment template CLI tool installed successfully.'"
+    "postinstall": "echo 'Payment Templates CLI installed successfully!'"
   },
   "keywords": [
     "payment",
@@ -22,10 +20,12 @@
   "license": "ISC",
   "description": "A CLI tool for adding payment method templates to your project.",
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.4.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   },
-  "homepage": "",
+  "homepage": "https://github.com/Avik-creator/payment-templates-package",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Avik-creator/payment-templates-package.git"

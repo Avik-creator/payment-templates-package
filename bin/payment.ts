@@ -1,11 +1,11 @@
 #!/usr/bin/env node
-import { program } from "commander";
-import { addPaymentMethod } from "./commands/addPaymentMethod";
+const program = require("commander");
+const { addPaymentMethod } = require("../src/payment");
 
 program
   .command("add <method>")
   .description("Add a payment method template")
-  .action((method) => {
+  .action((method: string) => {
     addPaymentMethod(method);
   });
 
