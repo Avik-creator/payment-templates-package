@@ -8,7 +8,7 @@ export const addPaymentMethod = (paymentMethod: string, project: string) => {
     scriptDir,
     `../templates/${paymentMethod.toLocaleLowerCase()}`
   );
-  const destDir = path.join(targetDir, `./${project}/${paymentMethod}`);
+  const destDir = path.join(targetDir);
 
   const filesToCopy = [
     {

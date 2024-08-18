@@ -12,37 +12,37 @@ npm install -g payment-templates
 
 ## Usage
 
-After installation, you can use the `payment-template` command to add payment method templates to your Backend project. The basic syntax is:
+After installation, you can use the `payment-templates` command to add payment method templates to your Backend project. The basic syntax is:
 
 ```bash
-npx payment-template add <method> for <project>
+npx payment-templates add <method>
 ```
 
 ### Commands
 
-- `add <method> for <project>`: Adds a payment method template for the specified project.
+- `add <method>`: Adds a payment method template for the specified project.
 
 ### Available Methods
 
 - `Stripe`: Adds a Stripe payment method template.
-- `Razorpay`: Adds a Razorpay payment method template.
+- `RazorPay`: Adds a Razorpay payment method template.
 
 ## Examples
 
 ### Adding Stripe Template
 
-To add a Stripe payment method template for a project named `MyProject`, run:
+To add a Stripe payment method template for a project, run:
 
 ```bash
-npx payment-template add Stripe for MyProject
+npx payment-templates add Stripe
 ```
 
 ### Adding Razorpay Template
 
-To add a Razorpay payment method template for a project named `YourProject`, run:
+To add a Razorpay payment method template for a project, run:
 
 ```bash
-npx payment-template add Razorpay for YourProject
+npx payment-template add RazorPay
 ```
 
 ## License
