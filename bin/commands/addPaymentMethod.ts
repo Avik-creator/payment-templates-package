@@ -40,8 +40,8 @@ export const addPaymentMethod = (paymentMethod: string) => {
       dest: path.join(destDir, `models/${paymentMethod}.ts`),
     },
     {
-      src: path.join(templateDir, "routes/User.ts"),
-      dest: path.join(destDir, "routes/User.ts"),
+      src: path.join(templateDir, `models/User.ts`),
+      dest: path.join(destDir, `models/User.ts`),
     },
 
     {
