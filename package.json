@@ -1,6 +1,6 @@
 {
   "name": "payment-templates",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -14,7 +14,12 @@
   "keywords": [
     "payment",
     "template",
-    "cli"
+    "cli",
+    "backend",
+    "express",
+    "typescript",
+    "stripe",
+    "razorpay"
   ],
   "author": "Avik Mukherjee",
   "license": "ISC",
