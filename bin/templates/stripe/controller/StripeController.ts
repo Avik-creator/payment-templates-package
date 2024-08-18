@@ -1,6 +1,6 @@
 import Stripe from "stripe";
 import { Request, Response } from "express";
-import { Payment, PaymentStatus } from "../models/Payment";
+import { Payment, PaymentStatus } from "../models/Stripe";
 const STRIPE = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const FRONTEND_URL = process.env.FRONTEND_URL!;
 

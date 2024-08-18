@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import Razorpay from "razorpay";
 import crypto from "crypto";
 import { razorpayInstance } from "../utils/RazorpayInstance";
-import { Payment, PaymentStatus } from "../models/Payment"; // Adjust the import path as needed
+import { Payment, PaymentStatus } from "../models/RazorPay"; // Adjust the import path as needed
 
 const FRONTEND_URL = process.env.FRONTEND_URL!;
 
