@@ -1,14 +1,14 @@
 import fs from "fs-extra";
 import path from "path";
 
-export const addPaymentMethod = (paymentMethod: string) => {
+export const addPaymentMethod = (paymentMethod: string, project: string) => {
   const scriptDir = __dirname;
   const targetDir = process.cwd();
   const templateDir = path.join(
     scriptDir,
     `../templates/${paymentMethod.toLocaleLowerCase()}`
   );
-  const destDir = path.join(targetDir, paymentMethod);
+  const destDir = path.join(targetDir, `./${project}/${paymentMethod}`);
 
   const filesToCopy = [
     {

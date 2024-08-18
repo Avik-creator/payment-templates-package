@@ -3,10 +3,10 @@ const program = require("commander");
 const { addPaymentMethod } = require("../bin/commands/addPaymentMethod");
 
 program
-  .command("add <method>")
+  .command("add <method> for <project>")
   .description("Add a payment method template")
-  .action((method: string) => {
-    addPaymentMethod(method);
+  .action((method: string, project: string) => {
+    addPaymentMethod(method, project);
   });
 
 program.parse(process.argv);
