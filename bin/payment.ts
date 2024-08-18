@@ -1,6 +1,6 @@
 #!/usr/bin/env ts-node
 const program = require("commander");
-const { addPaymentMethod } = require("../src/payment");
+const { addPaymentMethod } = require("../bin/commands/addPaymentMethod");
 
 program
   .command("add <method>")
