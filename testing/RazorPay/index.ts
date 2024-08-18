@@ -1,6 +1,6 @@
 import express, { Application } from "express";
 import dotenv from "dotenv";
-import stripeRoute from "./routes/StripeRoute";
+import razorpayRoute from "./routes/RazorPayRoute";
 import authRoute from "./routes/AuthRoute";
 import connectMongoDB from "./config/connectMongoDB";
 import cookieParser from "cookie-parser";
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-app.use("/api/stripe", stripeRoute);
+app.use("/api/stripe", razorpayRoute);
 app.use("/api/auth", authRoute);
 
 app.listen(PORT, () => {

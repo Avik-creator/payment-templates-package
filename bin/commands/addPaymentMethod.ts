@@ -58,6 +58,13 @@ export const addPaymentMethod = (paymentMethod: string) => {
     },
   ];
 
+  if (paymentMethod === "RazorPay") {
+    filesToCopy.push({
+      src: path.join(templateDir, "utils/RazorPayInstance.ts"),
+      dest: path.join(destDir, "utils/RazorPayInstance.ts"),
+    });
+  }
+
   // Ensure the target directory exists
   if (!fs.existsSync(destDir)) {
     fs.mkdirSync(destDir, { recursive: true });
