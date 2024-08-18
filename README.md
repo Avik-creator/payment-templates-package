@@ -45,10 +45,23 @@ To add a Razorpay payment method template for a project, run:
 npx payment-template add RazorPay
 ```
 
+### After Running the Command:
+ ```bash
+npx payment-templates add RazorPay
+```
+
+<img width="181" alt="Screenshot 2024-08-18 at 4 11 02 PM" src="https://github.com/user-attachments/assets/9a279205-0a7d-43bf-a435-cefa022eda97">
+
+ - The CLI tool includes authentication setup files to help you configure secure payment processing. For more details on how to use these files, refer to the [auth-typescript-template-package](https://github.com/Avik-creator/auth-typescript-template-package) repository.
+
 ## License
 
 This project is licensed under the [ISC License](https://opensource.org/licenses/ISC).
 
-## Contributing
+## Contributions
 
 Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+## Contact
+
+For questions or feedback, reach out to us at avikm744@gmail.com.
