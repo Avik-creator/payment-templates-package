@@ -4,7 +4,10 @@ import path from "path";
 export const addPaymentMethod = (paymentMethod: string) => {
   const scriptDir = __dirname;
   const targetDir = process.cwd();
-  const templateDir = path.join(scriptDir, `../templates/${paymentMethod}`);
+  const templateDir = path.join(
+    scriptDir,
+    `../templates/${paymentMethod.toLocaleLowerCase()}`
+  );
   const destDir = path.join(targetDir, paymentMethod);
 
   const filesToCopy = [
@@ -21,12 +24,12 @@ export const addPaymentMethod = (paymentMethod: string) => {
       dest: path.join(destDir, "config/connectMongoDB.ts"),
     },
     {
-      src: path.join(templateDir, `controllers/${paymentMethod}Controller.ts`),
-      dest: path.join(destDir, `controllers/${paymentMethod}Controller.ts`),
+      src: path.join(templateDir, `controller/${paymentMethod}Controller.ts`),
+      dest: path.join(destDir, `controller/${paymentMethod}Controller.ts`),
     },
     {
-      src: path.join(templateDir, `controllers/AuthController.ts`),
-      dest: path.join(destDir, `controllers/AuthController.ts`),
+      src: path.join(templateDir, `controller/AuthController.ts`),
+      dest: path.join(destDir, `controller/AuthController.ts`),
     },
     {
       src: path.join(templateDir, `middlewares/protectRoute.ts`),
