@@ -1,13 +1,15 @@
-import fs from "fs-extra";
+import fs from "fs";
 import path from "path";
+import { exec } from "child_process";
 
-export const addPaymentMethod = (paymentMethod: string, project: string) => {
+export const addPaymentMethod = (paymentMethod: string) => {
   const scriptDir = __dirname;
   const targetDir = process.cwd();
   const templateDir = path.join(
     scriptDir,
     `../templates/${paymentMethod.toLocaleLowerCase()}`
   );
+
   const destDir = path.join(targetDir);
 
   const filesToCopy = [
@@ -73,15 +75,44 @@ export const addPaymentMethod = (paymentMethod: string, project: string) => {
   try {
     filesToCopy.forEach(({ src, dest }) => {
       // Ensure the destination directory exists
-      fs.ensureDirSync(path.dirname(dest));
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+
       // Copy the file
       fs.copyFileSync(src, dest);
     });
 
     console.log(
-      `${paymentMethod} payment method files created successfully in the ${paymentMethod} folder.`
+      `${paymentMethod} payment method files created successfully in the folder.`
     );
   } catch (err) {
     console.error(`Error copying files for ${paymentMethod}:`, err);
   }
+
+  // Install necessary dependencies
+
+  console.log(`Installing packages for ${paymentMethod} payment method...`);
+  exec(
+    `npm install mongoose dotenv express bcryptjs jsonwebtoken cookie-parser ${paymentMethod.toLowerCase()} --save`,
+    (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Error installing packages for ${paymentMethod}:`, error);
+        return;
+      }
+
+      // Install dev dependencies
+      console.log("Installing dev dependencies...");
+      exec(
+        `npm install --save-dev nodemon @types/express @types/mongoose @types/jsonwebtoken @types/bcryptjs @types/cookie-parser`,
+        (error, stdout, stderr) => {
+          if (error) {
+            console.error(
+              `Error installing dev packages for ${paymentMethod}:`,
+              error
+            );
+            return;
+          }
+        }
+      );
+    }
+  );
 };

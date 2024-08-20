@@ -1,5 +1,5 @@
 #!/usr/bin/env ts-node
-const program = require("commander");
+const { program } = require("commander");
 const { addPaymentMethod } = require("../bin/commands/addPaymentMethod");
 
 program

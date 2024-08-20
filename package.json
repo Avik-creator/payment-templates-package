@@ -1,6 +1,6 @@
 {
   "name": "payment-templates",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
@@ -36,12 +36,11 @@
     "url": "git+https://github.com/Avik-creator/payment-templates-package.git"
   },
   "bugs": {
-    "email": "avikm744@gmail.com",
-    "url": "https://github.com/Avik-creator/payment-templates-package/issues"
+    "url": "https://github.com/Avik-creator/payment-templates-package/issues",
+    "email": "avikm744@gmail.com"
   },
   "dependencies": {
-    "commander": "^11.0.0",
-    "fs-extra": "^11.2.0"
+    "commander": "^12.1.0"
   },
   "directories": {
     "bin": "bin",
