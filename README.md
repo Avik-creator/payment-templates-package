@@ -6,6 +6,12 @@
 
 To install the `payment-templates` CLI tool globally, use the following command:
 
+1. Install ts-node globally:
+
+```bash
+npm install -g ts-node
+```
+
 ```bash
 npm install -g payment-templates
 ```
@@ -42,17 +48,18 @@ npx payment-templates add Stripe
 To add a Razorpay payment method template for a project, run:
 
 ```bash
-npx payment-template add RazorPay
+npx payment-templates add RazorPay
 ```
 
 ### After Running the Command:
- ```bash
+
+```bash
 npx payment-templates add RazorPay
 ```
 
 <img width="181" alt="Screenshot 2024-08-18 at 4 11 02 PM" src="https://github.com/user-attachments/assets/9a279205-0a7d-43bf-a435-cefa022eda97">
 
- - The CLI tool includes authentication setup files to help you configure secure payment processing. For more details on how to use these files, refer to the [auth-typescript-template-package](https://github.com/Avik-creator/auth-typescript-template-package) repository.
+- The CLI tool includes authentication setup files to help you configure secure payment processing. For more details on how to use these files, refer to the [auth-typescript-template-package](https://github.com/Avik-creator/auth-typescript-template-package) repository.
 
 ## License
 
